@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SquareMS</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- CSS -->
+        <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
+        <check if="{{ !empty(@user_theme) }}">
+            <true>
+                <link rel="stylesheet" href="/static/css/theme-{{ @user_theme }}.css">
+            </true>
+            <false>
+                <link rel="stylesheet" href="/static/css/theme-default.css">
+            </false>
+        </check>
+
+        <script src="/static/js/jquery.min.js"></script>
+        <script src="/static/js/easepack.min.js"></script>
+        <script src="/static/js/tweenlite.min.js"></script>
+        <script src="/static/js/bootstrap.min.js"></script>
+    </head>
+    <body class="{{ @body_classes }}">
+        <include href="{{ @target }}" />
+    </body>
+</html>
