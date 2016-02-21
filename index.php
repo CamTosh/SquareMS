@@ -22,7 +22,8 @@ $f3->set('ONERROR',
 
         switch($f3->get('ERROR.code')) {
             case 404:
-                echo Template::instance()->render('404.html');
+                // Reroute to index
+                $f3->reroute('/');
                 return true;
                 break;
             default:
