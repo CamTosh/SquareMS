@@ -10,7 +10,7 @@
     function initHeader() {
         width = window.innerWidth;
         height = window.innerHeight;
-        target = {x: width/2, y: height/2};
+        target = {x: width/2, y: height/4};
 
         largeHeader = document.getElementById('backnet');
         //largeHeader.style.height = (height / 2)+'px';
@@ -18,7 +18,7 @@
 
         canvas = document.getElementById('backnet-canvas');
         canvas.width = width;
-        canvas.height = height;
+        canvas.height = height / 2;
         ctx = canvas.getContext('2d');
 
         // create points
@@ -81,8 +81,8 @@
     function mouseMove(e) {
         var posx = posy = 0;
         if (e.pageX || e.pageY) {
-            posx = e.pageX;
-            posy = e.pageY;
+            posx = e.pageX - 10;
+            posy = e.pageY - 50;
         }
         else if (e.clientX || e.clientY)    {
             posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
@@ -99,7 +99,7 @@
 
     function resize() {
         width = window.innerWidth;
-        height = window.innerHeight;
+        height = window.innerHeight / 2;
         //largeHeader.style.height = (height / 2)+'px';
         largeHeader.style.height = '400px';
         canvas.width = width;

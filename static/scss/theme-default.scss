@@ -7,6 +7,7 @@ $brand-success:         darken(#428bca, 6.5%);
 
 // Text color
 $text-color:            #f2f2f2;
+$link-color:            #f2f2f2;
 
 // Navbar
 $navbar-height:         60px;
@@ -29,3 +30,4 @@ $navbar-default-link-disabled-bg:          transparent !default;
 @import "components/buttons";
 @import "components/home";
 @import "components/backnet";
+@import "components/hr";

@@ -14,7 +14,6 @@ body.home {
         border-radius: 2px;
         color: $gray-dark;
         font-family: 'Raleway', sans-serif;
-        height: 200px;
 
         .card-title {
             text-align: center;
@@ -27,7 +26,11 @@ body.home {
         }
     }
 
-    .card-h120 {
+    .card-nomargin {
+        margin: 0;
+    }
 
+    .card-h200 {
+        height: 200px;
     }
 }
